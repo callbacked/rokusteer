@@ -1,4 +1,4 @@
-![logo](https://github.com/callbacked/rokusteer/blob/master/Frontend/public/logo192.png?raw=true)
+![logo](https://github.com/callbacked/rokusteer/blob/master/public/logo192.png?raw=true)
 # Rokusteer
 A simple web-based Roku Remote, just enter your Roku device's IP and you are ready to go!
 
