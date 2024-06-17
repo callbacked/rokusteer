@@ -1,0 +1,114 @@
+.channel-list-container {
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.9);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s ease-in-out;
+}
+
+.channel-list-container.expanded {
+    border-radius: 20px;
+    width: 85%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.expand-button {
+    /* background-color: rgba(60, 60, 60, 0.8); */
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.expand-button:hover {
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+.expanded-view {
+    width: 100%;
+    height: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(60, 60, 60, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10; 
+}
+
+.close-button:hover {
+    background-color: rgba(80, 80, 80, 0.8);
+}
+
+.channel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.channel-item img {
+    width: 145px;
+    height: 109px;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    object-fit: cover;
+}
+
+.channel-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.channel-item p {
+    margin-top: 10px;
+    text-align: center;
+    margin-right: 3.5rem;
+    color: #fff;
+    font-weight: 630;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}

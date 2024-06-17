@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  backend: 
+    build:
+      context: ./Backend
+    ports:
+      - "5058:5000"
+  frontend:
+    build:
+      context: ./Frontend
+    ports:
+      - "3033:3000"
+    environment:
+      REACT_APP_BACKEND_URL:
