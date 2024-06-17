@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   backend: 
-    build:
+    build: 
       context: ./Backend
     ports:
       - "5058:5000"
