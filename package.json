@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "export REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL:-$(grep REACT_APP_BACKEND_URL .env | cut -d '=' -f2)} && react-scripts start",
-    "build": "export REACT_APP_BACKEND_URL=${REACT_APP_BACKEND_URL:-$(grep REACT_APP_BACKEND_URL .env | cut -d '=' -f2)} && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
