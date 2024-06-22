@@ -17,12 +17,14 @@ import {
   VolumeUp as VolumeUpIcon,
   PowerSettingsNew as PowerIcon,
   Star as StarIcon,
+  HelpOutline as HelpOutlineIcon,
 } from '@mui/icons-material';
 
 const RemoteControl = ({ rokuIp, setRokuIp, hideIpBar }) => {
   const [keyboardControl, setKeyboardControl] = useState(false);
   const [pressedKey, setPressedKey] = useState('');
   const [isPoweredOn, setIsPoweredOn] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(false);
 
   useEffect(() => {
     const savedRokuIp = localStorage.getItem('rokuIp');
@@ -87,6 +89,10 @@ const RemoteControl = ({ rokuIp, setRokuIp, hideIpBar }) => {
     setIsPoweredOn(!isPoweredOn);
   };
 
+  const toggleInstructions = () => {
+    setShowInstructions(!showInstructions);
+  };
+
   return (
     <div className="flex flex-col items-center bg-transparent h-68vh text-white p-4 rounded-xl ">
       <div className={`header mb-4 text-black ${hideIpBar ? 'invisible' : 'visible'} md:visible`}>
@@ -97,7 +103,34 @@ const RemoteControl = ({ rokuIp, setRokuIp, hideIpBar }) => {
           onChange={handleIpChange} 
           className="p-2 border rounded text-white bg-gray-700 border-gray-900"
         />
+        <HelpOutlineIcon 
+          className="ml-2 cursor-pointer text-gray-500" 
+          onClick={toggleInstructions} 
+        />
       </div>
+      {showInstructions && (
+        <div className="instructions absolute bg-gray-800 text-white p-4 rounded shadow-lg fade-in z-50">
+          <h2 className="text-lg mb-2">How to Find Your Roku's IP Address</h2>
+          <p>1. On your Roku remote, press the Home button.</p>
+          <p>2. Navigate to Settings.</p>
+          <p>3. Select Network.</p>
+          <p>4. Select About.</p>
+          <p>The IP address will be displayed on the screen.</p>
+
+          <h2 className="text-xl mb-2">Alternatively...</h2>
+          <p>Download a network scanning application on your phone</p>
+          <p>like <a href="https://www.fing.com/fing-app/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Fing</a> to have it display the IP addresses of all your devices.</p>
+          <p>Your Roku device should be named "Roku" by default so it will be easy to spot.</p>
+          <p className="text-xs font-bold">(not an endorsement to Fing at all, I just find the app useful)</p>
+
+          <button
+            className="mt-2 p-2 bg-purple-800 text-white rounded hover:bg-purple-700 transition-colors"
+            onClick={toggleInstructions}
+          >
+            Close
+          </button>
+        </div>
+      )}
       <div className="mb-4 text-white hidden md:block">
         <label>
           <input
