@@ -1,5 +1,5 @@
 const backendURL = process.env.REACT_APP_BACKEND_URL;
-console.log(backendURL);
+// console.log(backendURL);
 
 export const sendCommand = async (rokuIp, command) => {
     try {
