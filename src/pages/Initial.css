@@ -1,70 +1,72 @@
 .keyboard-search {
-    position: relative;
-  }
-  
-  .keyboard-button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .keyboard-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .search-form {
-    display: inline-flex;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .search-input {
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    padding: 0 10px;
-    background-color: rgba(47, 47, 47, 0.9);
-    color: white;
-    margin-left: 10px;
-    outline: none;
-    transition: width 0.3s ease;
-  }
-  
-  .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  .initial-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: rgb(0,0,0);
-    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,7,12,1) 11%, rgba(11,15,24,1) 18%, rgba(17,24,39,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,7,12,1) 11%, rgba(11,15,24,1) 18%, rgba(17,24,39,1) 100%);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,7,12,1) 11%, rgba(11,15,24,1) 18%, rgba(17,24,39,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#111827",GradientType=1,blur(8px)); 
-    padding: 20px;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .remote-and-carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
+  position: relative;
+}
+
+.keyboard-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.keyboard-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.search-form {
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.search-input {
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  padding: 0 10px;
+  background-color: rgba(47, 47, 47, 0.9);
+  color: white;
+  margin-left: 10px;
+  outline: none;
+  transition: width 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.initial-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,7,12,1) 11%, rgba(11,15,24,1) 18%, rgba(17,24,39,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,7,12,1) 11%, rgba(11,15,24,1) 18%, rgba(17,24,39,1) 100%);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(5,7,12,1) 11%, rgba(11,15,24,1) 18%, rgba(17,24,39,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#111827", GradientType=1, blur(8px)); 
+  padding: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.remote-and-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 16px;
+}
