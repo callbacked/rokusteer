@@ -76,8 +76,9 @@ const ChannelList = ({ rokuIp }) => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
+                    initialSlide: 1,
                     dots: false // Hide dots in mobile 
                 }
             }
@@ -91,7 +92,7 @@ const ChannelList = ({ rokuIp }) => {
                     <AppsIcon style={{ fontSize: 24, color: 'white' }} />
                 </button>
             ) : (
-                <div className="expanded-view">
+                <div className="expanded-view text-white font-bold">
                     <button className="close-button" onClick={() => setIsExpanded(false)}>
                         <CloseIcon style={{ fontSize: 24, color: 'white' }} />
                     </button>
@@ -101,9 +102,9 @@ const ChannelList = ({ rokuIp }) => {
                                 <img
                                     src={`${backendURL}/query-icon?rokuIp=${rokuIp}&appId=${channel.id}`}
                                     alt={channel.name}
-                                    className="channel-icon"
+                                    className="channel-icon ml-2 md:ml-5"
                                 />
-                                <p>{channel.name}</p>
+                                <p className="ml-3 md:ml-1">{channel.name}</p>
                             </div>
                         ))}
                     </Slider>
@@ -111,6 +112,6 @@ const ChannelList = ({ rokuIp }) => {
             )}
         </div>
     );
-};
+}    
 
 export default ChannelList;

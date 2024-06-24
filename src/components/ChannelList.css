@@ -71,9 +71,8 @@
 .channel-item img {
     width: 145px;
     height: 109px;
-    border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
-    object-fit: cover;
+    object-fit:contain;
 }
 
 .channel-item img:hover {
@@ -81,13 +80,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.channel-item p {
+/* .channel-item p {
     margin-top: 10px;
     text-align: center;
     margin-right: 3.5rem;
     color: #fff;
     font-weight: 630;
-}
+} */
+
 
 .slick-dots li button:before {
     font-size: 10px;

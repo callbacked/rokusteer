@@ -95,18 +95,19 @@ const RemoteControl = ({ rokuIp, setRokuIp, hideIpBar }) => {
 
   return (
     <div className="flex flex-col items-center bg-transparent h-68vh text-white p-4 rounded-xl ">
-      <div className={`header mb-4 text-black ${hideIpBar ? 'invisible' : 'visible'} md:visible`}>
+      <div className={`header my-3 text-black ${hideIpBar ? 'invisible' : 'visible'} md:visible`}>
+      <HelpOutlineIcon 
+          className="-ml-5 p-0.5 cursor-pointer text-gray-500 hover:text-white" 
+          onClick={toggleInstructions} 
+        />
         <input 
           type="text" 
           placeholder="Enter Roku IP" 
           value={rokuIp} 
           onChange={handleIpChange} 
-          className="p-2 border rounded text-white bg-gray-700 border-gray-900"
+          className="p-1.5 border rounded text-white bg-gray-700 border-gray-900"
         />
-        <HelpOutlineIcon 
-          className="ml-2 cursor-pointer text-gray-500" 
-          onClick={toggleInstructions} 
-        />
+
       </div>
       {showInstructions && (
         <div className="instructions absolute bg-gray-800 text-white p-4 rounded shadow-lg fade-in z-50">
