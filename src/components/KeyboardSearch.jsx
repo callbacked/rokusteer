@@ -48,8 +48,8 @@ const KeyboardSearch = ({ rokuIp, isSearching, setIsSearching }) => {
   }, [isSearching]);
 
   return (
-    <div className="keyboard-search">
-      <button className="keyboard-button" onClick={() => setIsSearching(!isSearching)}>
+    <div className="keyboard-search pt-2">
+      <button className="keyboard-button " onClick={() => setIsSearching(!isSearching)}>
         {isSearching ? <CloseIcon style={{ fontSize: 24, color: 'white' }} /> : <KeyboardIcon style={{ fontSize: 24, color: 'white' }} />}
       </button>
       {isSearching && (
